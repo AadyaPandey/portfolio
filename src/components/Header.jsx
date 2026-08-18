@@ -2,26 +2,28 @@ import HoverLink from "./HoverLink";
 
 function Header() {
   return (
-    <header className="w-full pt-8 text-black">
+    <header className="w-full pt-6 text-black md:pt-8">
       {/* Top row */}
-      <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-8">
+      <div className="flex flex-col gap-5 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
         {/* Left */}
         <div className="flex min-w-0 items-center gap-3 font-sans text-[16px]">
-          <span className="h-px min-w-[40px] flex-1 bg-black" />
+          <span className="hidden h-px min-w-[40px] flex-1 bg-black md:block" />
         </div>
 
         {/* Center */}
-        <div className="relative z-10 bg-white px-2.5">
-          <h1 className="whitespace-nowrap font-sans text-[30px] font-normal leading-none">
+        <div className="relative z-10 bg-white px-2.5 text-center">
+          <h1 className="font-sans text-[26px] font-normal leading-none md:whitespace-nowrap md:text-[30px]">
             AADYA PANDEY
           </h1>
         </div>
 
         {/* Right */}
-        <nav className="flex items-center justify-end gap-2.5 whitespace-nowrap font-sans text-[16px]">
-          <span className="h-px min-w-[40px] flex-1 bg-black" />
+        <nav className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 font-sans text-[14px] md:justify-end md:whitespace-nowrap md:text-[16px]">
+          <span className="hidden h-px min-w-[40px] flex-1 bg-black md:block" />
 
-          <HoverLink href="https://drive.google.com/file/d/1iJ5o_fg3S1dKA9bDQklOo4fVJ15xAnSQ/view?usp=sharing">Resume</HoverLink>
+          <HoverLink href="https://drive.google.com/file/d/1iJ5o_fg3S1dKA9bDQklOo4fVJ15xAnSQ/view?usp=sharing">
+            Resume
+          </HoverLink>
 
           <span>–</span>
 
@@ -31,7 +33,9 @@ function Header() {
 
           <span>–</span>
 
-          <HoverLink href="https://github.com/AadyaPandey">Github</HoverLink>
+          <HoverLink href="https://github.com/AadyaPandey">
+            Github
+          </HoverLink>
 
           <span>–</span>
 
@@ -39,7 +43,7 @@ function Header() {
             Leetcode
           </HoverLink>
 
-          <span>–</span>
+          <span className="hidden md:inline">–</span>
         </nav>
       </div>
 

@@ -36,14 +36,15 @@ function Socials() {
           <article
             key={profile.title}
             className={`
-              ${index !== 0 ? "border-l border-black" : ""}
-              px-3
-              ${index === 0 ? "pl-0" : ""}
-              ${index === profiles.length - 1 ? "pr-0" : ""}
+              px-0 py-7
+              md:px-3 md:py-0
+              ${index !== 0 ? "border-t border-black md:border-l md:border-t-0" : ""}
+              ${index === 0 ? "md:pl-0" : ""}
+              ${index === profiles.length - 1 ? "md:pr-0" : ""}
             `}
           >
             {/* Image */}
-            <div className="group mb-5 h-[260px] w-full overflow-hidden sm:h-[285px] lg:h-[310px]">
+            <div className="group mb-5 h-[220px] w-full overflow-hidden sm:h-[280px] md:h-[260px] lg:h-[310px]">
               <img
                 src={profile.image}
                 alt={profile.title}
@@ -52,7 +53,7 @@ function Socials() {
             </div>
 
             {/* Title */}
-            <h2 className="font-sans text-[30px] font-normal leading-[1.15]">
+            <h2 className="font-sans text-[27px] font-normal leading-[1.15] md:text-[30px]">
               {profile.title}
             </h2>
 

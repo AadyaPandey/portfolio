@@ -32,7 +32,7 @@ function Articles() {
   return (
     <section className="w-full py-7">
       {/* Section label */}
-      <div className="mb-6 flex items-center gap-3 font-sans text-[30px]">
+      <div className="mb-6 flex items-center gap-3 font-sans text-[28px] md:text-[30px]">
         <span>Projects</span>
       </div>
 
@@ -42,14 +42,15 @@ function Articles() {
           <article
             key={article.title}
             className={`
-              ${index !== 0 ? "border-l border-black" : ""}
-              px-3
-              ${index === 0 ? "pl-0" : ""}
-              ${index === articles.length - 1 ? "pr-0" : ""}
+              px-0 py-7
+              md:px-3 md:py-0
+              ${index !== 0 ? "border-t border-black md:border-l md:border-t-0" : ""}
+              ${index === 0 ? "md:pl-0" : ""}
+              ${index === articles.length - 1 ? "md:pr-0" : ""}
             `}
           >
             {/* Image */}
-            <div className="group relative mb-5 h-[260px] w-full overflow-hidden rounded-none sm:h-[285px] lg:h-[310px]">
+            <div className="group relative mb-5 h-[220px] w-full overflow-hidden rounded-none sm:h-[280px] md:h-[260px] lg:h-[310px]">
               <img
                 src={article.image}
                 alt=""
@@ -58,7 +59,7 @@ function Articles() {
             </div>
 
             {/* Title */}
-            <h2 className="font-sans text-[30px] font-normal leading-[1.15]">
+            <h2 className="font-sans text-[27px] font-normal leading-[1.15] md:text-[30px]">
               {article.title}
             </h2>
 

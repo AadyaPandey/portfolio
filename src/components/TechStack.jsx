@@ -1,12 +1,13 @@
+import techstack from "../assets/techstack(1).png";
+
 function TechStack() {
   return (
     <section className="w-full py-5">
-      {/* Image */}
-      <div className="group h-[230px] w-full overflow-hidden">
+      <div className="w-full overflow-hidden">
         <img
-          src="/src/assets/techstack.png"
+          src={techstack}
           alt="Technology stack"
-          className="image-grayscale block h-auto w-full object-cover"
+          className="image-grayscale block h-auto w-full"
         />
       </div>
     </section>
